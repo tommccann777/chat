@@ -17,23 +17,23 @@ It seems that VSCode was running a different version of Python to the one I had 
 
 **To diagnose**
 1. I ran 'which python' from the command line and it reported 2 different versions on the system:
-C:\Users\tommc\AppData\Local\Programs\Python\Python312\python.exe
-C:\Users\tommc\AppData\Local\Microsoft\WindowsApps\python.exe
+  C:\Users\tommc\AppData\Local\Programs\Python\Python312\python.exe
+  C:\Users\tommc\AppData\Local\Microsoft\WindowsApps\python.exe
 
 2. To see which interpreter was running from the command line, I opened the python interpreter and ran this program:
-    import sys
-    print(sys.executable)
+  import sys
+  print(sys.executable)
 
-Output was:
-C:\Users\tommc\AppData\Local\Programs\Python\Python312\python.exe
+  Output was:
+  C:\Users\tommc\AppData\Local\Programs\Python\Python312\python.exe
 
-This is the correct interpreter.
+  This is the correct interpreter.
 
 3. In VSCode I looked at which interpreter is running there. Ctrl-Shift-P for the command palette,
 followed by 'Python Select Interpreter'. It reported the following path:
-~\AppData\Local\Microsoft\WindowsApps\python.exe
+  ~\AppData\Local\Microsoft\WindowsApps\python.exe
 
-This is the incorrect interpreter.
+  This is the incorrect interpreter.
 
 **The fix**
 There are probably many solutions, but the easiest was to manually set the interpreter from within VSCode:
